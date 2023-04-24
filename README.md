@@ -1,4 +1,4 @@
-# Starting point
+# ublue-wyvern
 
 [![build-ublue](https://github.com/rilicthefox/ublue-wyvern/actions/workflows/build.yml/badge.svg)](https://github.com/rilicthefox/ublue-wyvern/actions/workflows/build.yml)
 
