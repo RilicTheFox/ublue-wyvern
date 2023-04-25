@@ -1,34 +1,46 @@
 # The image will be at ghcr.io/yourusername/name
 name: ublue-wyvern
+
 # The native container image to build on top of
 # images. 
 # Warning: Non-uBlue images might function unexpectly
 base-container: ghcr.io/ublue-os/silverblue-main
+
 # What fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated
 # to the next major version assuming the image you're using as your base container
 # builds with the tag (all uBlue images do this). 
-fedora-version: 37
+fedora-version: 38
+
 # This description will be visible in the container metadata
-description: A starting point for further customization of uBlue images. Make your own! https://ublue.it/making-your-own/
+description: Wyvern's Ublue image.
+
 # These scripts will be executed during the container build
 # Place scripts in scripts/ and put the corresponding filename here
 scripts:
-#  - example.sh
+#  nothing here owo
 
 # These rpms will be installed from the fedora repository
 # using rpm-ostree and will be preinstalled in the final image
 rpms:
   - python3-pip # needed for yafti (the first boot installer)
-# These Flatpaks (from flathub) will be available for install on boot
-# this is just an example selection.
+  - tailscale
+  - onedrive
+  - adw-gtk3
+
+# These Flatpaks (from flathub) will be available for install on boot.
 # If you leave this empty you can use yafti for post-boot installation
 flatpaks:
-  - org.mozilla.firefox
-  - org.mozilla.Thunderbird
+  - com.logseq.Logseq
+  - com.bitwarden.desktop
   - com.mattjakeman.ExtensionManager
   - org.libreoffice.LibreOffice
-  - org.gnome.DejaDup
+  - org.gnome.World.PikaBackup
   - org.gustavoperedo.FontDownloader
   - com.github.tchx84.Flatseal
-  - io.github.celluloid_player.Celluloid
+  - org.gnome.Lollypop
+  - com.github.GradienceTeam.Gradience
+  - com.discordapp.Discord
+  - org.gtk.Gtk3theme.adw-gtk3
+  - org.gtk.Gtk3theme.adw-gtk3-dark
+
